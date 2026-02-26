@@ -3,6 +3,8 @@
 import { motion } from 'motion/react';
 import { ArrowRight, Terminal } from 'lucide-react';
 import Image from 'next/image';
+import myImage from '../public/Harshika_image.jpg';
+
 
 export default function Hero() {
   return (
@@ -94,7 +96,7 @@ export default function Hero() {
             {/* Main Image - Replace the src with your actual image URL */}
             <div className="relative w-full h-full rounded-[3rem] overflow-hidden border-8 border-white shadow-2xl bg-white">
               <Image 
-                src="https://picsum.photos/seed/harshika/800/800" 
+                src={myImage}
                 alt="Harshika Saini" 
                 fill 
                 className="object-cover" 

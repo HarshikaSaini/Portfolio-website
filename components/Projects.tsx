@@ -3,6 +3,8 @@
 import { motion } from 'motion/react';
 import { ExternalLink, Github } from 'lucide-react';
 import Image from 'next/image';
+import devTinder from '../public/devtinder.png';
+import video from '../public/youtube.png';
 
 const projects = [
   {
@@ -10,18 +12,20 @@ const projects = [
     title: 'DevTinder Application',
     description: 'Real-time networking platform built with React, Node.js, Socket.io, MongoDB, and JWT authentication. Features include real-time chat, match algorithms, and scalable pub/sub messaging using Redis.',
     tech: ['React', 'Node.js', 'Socket.io', 'MongoDB', 'Redis', 'Tailwind'],
-    link: '#',
-    image: 'https://picsum.photos/seed/devtinder/800/600',
-    color: 'from-pink-500 to-orange-400'
+    link: 'https://devtinder-ui-ycxo.onrender.com/',
+    image: devTinder,
+    color: 'from-pink-500 to-orange-400',
+    hrefLink:"https://github.com/HarshikaSaini/dev_tinder_frontend"
   },
   {
     id: 2,
     title: 'Video Hunt',
     description: 'Video streaming application enabling users to search and play videos based on preferences. Integrates YouTube/Vimeo APIs with React player, infinite scroll, and recommendation engine using React Query.',
     tech: ['React', 'Material-UI', 'React Query', 'Axios', 'HLS'],
-    link: '#',
-    image: 'https://picsum.photos/seed/videohunt/800/600',
-    color: 'from-blue-500 to-purple-500'
+    link: 'https://harshika-youtube.netlify.app/',
+    image: video,
+    color: 'from-blue-500 to-purple-500',
+    hrefLink:"https://github.com/HarshikaSaini/ytclone"
   }
 ];
 
@@ -66,7 +70,7 @@ export default function Projects() {
                   <a href={project.link} target="_blank" rel="noreferrer" className="w-12 h-12 rounded-full bg-white text-slate-900 flex items-center justify-center shadow-lg hover:scale-110 transition-transform">
                     <ExternalLink className="w-5 h-5" />
                   </a>
-                  <a href="#" target="_blank" rel="noreferrer" className="w-12 h-12 rounded-full bg-slate-900 text-white flex items-center justify-center shadow-lg hover:scale-110 transition-transform">
+                  <a href={project.hrefLink} target="_blank" rel="noreferrer" className="w-12 h-12 rounded-full bg-slate-900 text-white flex items-center justify-center shadow-lg hover:scale-110 transition-transform">
                     <Github className="w-5 h-5" />
                   </a>
                 </div>
